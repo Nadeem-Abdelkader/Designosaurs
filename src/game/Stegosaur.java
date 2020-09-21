@@ -33,7 +33,7 @@ public class Stegosaur extends Actor {
 		return new Actions(new AttackAction(this));
 	}
 
-	/**
+	/**f
 	 * Figure out what to do next.
 	 * 
 	 * FIXME: Stegosaur wanders around at random, or if no suitable MoveActions are available, it
