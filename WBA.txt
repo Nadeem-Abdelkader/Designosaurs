@@ -1,7 +1,14 @@
-Grass - Nadeem
-Hungry dinosaurs - Nadeem
-Breeding - Charles
-Eco points and purchasing - Charles
-Allosaurs - Charles
+Grass - Nadeem Abdelkader
+Hungry dinosaurs - Nadeem Abdelkader
+Breeding - Charles Tan
+Eco points and purchasing - Charles Tan
+Allosaurs - Charles Tan
 
-I accept this WBA, Nadeem
+The responsibility of each feature includes:
+    1 - Producing class diagram
+    2 - Producing interaction diagram
+    3 - Producing design rationale
+
+Each member is resposnible for some features. However, we discuss all the features with eachother.
+
+I accept this WBA, Nadeem Abdelkader
