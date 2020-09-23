@@ -1,0 +1,13 @@
+To implement a system that will allow grass to grow, a Grass class was created.
+
+The Grass class:
+    1 - Extends the Ground class
+    2 - Has a dependency relationship with the Application class (Application creates a Grass instance)
+    3 - Has an association relationship with the Dirt class (Dirt grows Grass)
+    
+To implement a system where trees can drop fruit a Fruit class was created
+
+The Fruit class:
+    1 - Extends the Item class
+    2 - Has a dependency relationship with the Application class (Application creates a Fruit instance)
+    3 - Has an association relationship with the Tree class (Tree drops Fruit)
