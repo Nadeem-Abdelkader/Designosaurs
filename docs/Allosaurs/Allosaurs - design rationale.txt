@@ -1,0 +1,5 @@
+For Allosaurs to be added into the game, a new dedicated class will be added into the game where it will interface the
+classes similar to Stegosaur where it has the same behaviour such as eat, breed, wander and follow, however there will
+be extra behaviour such as attack where an allosaur will attack a stegosaur. When creating the class allosaurs, it is
+expected that a Stegosaur will inherite a dinosaur class but if there are no such classes the only way to implement
+another type of dinosaur is to create another class for it.
