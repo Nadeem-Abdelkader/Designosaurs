@@ -1,0 +1,21 @@
+For players to gain points or currency by doing certain objectives in the game, the player class will have two classes
+to modify the current points the player has, which is gaining points or losing points, at the moment there is only
+methods to gain points for the player by doing objectives in the game and no methods to lose points so a class to
+decrement points from players might be redundant but if such  mechanism is being implemented in the future, such method
+can be implemented into this game without requiring to refactor any existing code and such. The player class will
+inherit the Actor class as shown in the engine sequence diagram.
+
+For the vending machine to be implemented in the world, it will inherit the ground class from the engine and interface
+two classes, GainItem and UseCurrency. The GainItem class is used for when the player spends the points and gains the
+item that the player wants to exchange to, it is implemented as a class to allow easy addition of any new items or to
+delete any existing items from the vending machine. The UseCurrency class will be used just to update the player's
+current points when the player buys an item.
+
+For Allosaurs to be added into the game, a new dedicated class will be added into the game where it will interface the
+classes similar to Stegosaur where it has the same behaviour such as eat, breed, wander and follow, however there will
+be extra behaviour such as attack where an allosaur will attack a stegosaur. When creating the class allosaurs, it is
+expected that a Stegosaur will inherite a dinosaur class but if there are no such classes the only way to implement
+another type of dinosaur is to create another class for it.
+
+The breeding function for the Stegosaur will be only adding an extra behaviour of breed in the same interface of
+behaviour as it only adds an attribute to the Stegosaur class.
