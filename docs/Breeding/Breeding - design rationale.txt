@@ -1,0 +1,2 @@
+The breeding function for the Stegosaur will be only adding an extra behaviour of breed in the same interface of
+behaviour as it only adds an attribute to the Stegosaur class.

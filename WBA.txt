@@ -1,13 +1,9 @@
 Grass - Nadeem Abdelkader
 Hungry dinosaurs - Nadeem Abdelkader
-Breeding - Charles Tan
-Eco points and purchasing - Charles Tan
-Allosaurs - Charles Tan
+Breeding - Charles Tan Wei Wen
+Eco points and purchasing - Charles Tan Wei Wen
+Allosaurs - Charles Tan Wei Wen
 
-<<<<<<< HEAD
-I accept this WBA, Nadeem
-I accept this WBA, Charles Tan Wei Wen
-=======
 The responsibility of each feature includes:
     1 - Producing class diagram
     2 - Producing interaction diagram
@@ -17,4 +13,3 @@ Each member is resposnible for some features. However, we discuss all the featur
 
 I accept this WBA, Nadeem Abdelkader
 I accept this WBA, Charles Tan Wei Wen
->>>>>>> origin/master
