@@ -1,6 +1,5 @@
-To implement hunger and feeding in the system a new EatBehaviour class was created.
+To implement hunger and feeding in the system a new behaviour for eating should be added, so a EatBehaviour class was created.
 
 The EatBehaviour class:
     1 - Implements the Behaviour class
-    2 - Has a dependency relationship with the Grass class
-    3 - Has a dependency relationship with the Fruit class
+    
