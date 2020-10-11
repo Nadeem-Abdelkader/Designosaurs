@@ -1,7 +1,7 @@
-- Group Allosaurs and Stegosaurs into one class (Dinosaurs)
 - Add the player interaction with item (Players gains items)
-- Add Eggs
-- Add Hay
 - Add laser gun
 - Add opt conditions
 - Add reasoning in rationale
+- Add Eggs
+- Add Hay
+- Group Allosaurs and Stegosaurs into one class (Dinosaurs)
