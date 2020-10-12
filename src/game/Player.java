@@ -29,9 +29,13 @@ public class Player extends Actor {
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
 		if(map.locationOf(this).getGround() instanceof Grass)
 		{
-			actions.add(new CollectGrass(map.locationOf(this)));
+			actions.add(new HarvestGrass(map.locationOf(this)));
 		}
 		if(map.locationOf(this).getGround() instanceof Tree)
+		{
+			actions.add(new PickFruit(map.locationOf(this)));
+		}
+		if(map.locationOf(this).getItems() instanceof Fruit)
 		{
 			actions.add(new PickFruit(map.locationOf(this)));
 		}

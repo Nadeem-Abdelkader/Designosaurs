@@ -5,12 +5,12 @@ import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.Location;
 
-public class CollectGrass extends Action
+public class HarvestGrass extends Action
 {
 
     private Location location;
 
-    public CollectGrass(Location location)
+    public HarvestGrass(Location location)
     {
         this.location = location;
     }

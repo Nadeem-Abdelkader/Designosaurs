@@ -8,13 +8,16 @@ import edu.monash.fit2099.engine.Display;
 import edu.monash.fit2099.engine.DoNothingAction;
 import edu.monash.fit2099.engine.GameMap;
 
+import java.util.ArrayList;
+
 /**
  * A herbivorous dinosaur.
  *
  */
 public class Stegosaur extends Actor {
 	// Will need to change this to a collection if Stegosaur gets additional Behaviours.
-	private Behaviour behaviour;
+	private ArrayList<Behaviour> behaviour = new ArrayList<>();
+
 
 	/** 
 	 * Constructor.
@@ -25,7 +28,7 @@ public class Stegosaur extends Actor {
 	public Stegosaur(String name) {
 		super(name, 'd', 100);
 		
-		behaviour = new WanderBehaviour();
+		behaviour.add(new WanderBehaviour());
 	}
 
 	@Override
@@ -43,10 +46,13 @@ public class Stegosaur extends Actor {
 	 */
 	@Override
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
-		Action wander = behaviour.getAction(this, map);
-		if (wander != null)
-			return wander;
-		
+		for (int i = 0; i < behaviour.size(); i++)
+		{
+			Action wander = behaviour.get(i).getAction(this, map);
+			if (wander != null)
+				return wander;
+
+		}
 		return new DoNothingAction();
 	}
 
