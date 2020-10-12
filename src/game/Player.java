@@ -27,9 +27,18 @@ public class Player extends Actor {
 
 	@Override
 	public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
+		if(map.locationOf(this).getGround() instanceof Grass)
+		{
+			actions.add(new CollectGrass(map.locationOf(this)));
+		}
+		if(map.locationOf(this).getGround() instanceof Tree)
+		{
+			actions.add(new PickFruit(map.locationOf(this)));
+		}
 		// Handle multi-turn Actions
 		if (lastAction.getNextAction() != null)
 			return lastAction.getNextAction();
+
 		return menu.showMenu(this, actions, display);
 	}
 }
