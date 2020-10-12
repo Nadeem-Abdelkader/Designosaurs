@@ -5,18 +5,11 @@ import edu.monash.fit2099.engine.Location;
 
 public class Fruit extends Item
 {
-    /***
-     * Constructor.
-     *  @param name the name of this Item
-     * @param displayChar the character to use to represent this item if it is on the ground
-     * @param portable true if and only if the Item can be picked up
-     */
-
     int rot = 0;
 
-    public Fruit(String name, char displayChar, boolean portable)
+    public Fruit()
     {
-        super(name, displayChar, portable);
+        super("Fruit", 'F', true);
     }
 
     @Override
