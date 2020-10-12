@@ -18,7 +18,6 @@ public class Dirt extends Ground {
 		int chanceGrass = 10;
 		int counter = 0;
 		double random = Math.random() * 99 + 1;
-		boolean grew = false;
 
 		for (Exit exit : location.getExits())
 		{
@@ -32,7 +31,6 @@ public class Dirt extends Ground {
 					{
 						Ground grass = new Grass();
 						location.setGround(grass);
-						grew = true;
 					}
 				}
 
@@ -43,7 +41,6 @@ public class Dirt extends Ground {
 				{
 					Ground grass = new Grass();
 					location.setGround(grass);
-					grew = true;
 				}
 			}
 		}
