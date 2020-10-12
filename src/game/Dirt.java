@@ -1,21 +1,51 @@
 package game;
-
-import edu.monash.fit2099.engine.Ground;
-import edu.monash.fit2099.engine.Location;
-import game.Grass;
+import edu.monash.fit2099.engine.*;
 
 /**
  * A class that represents bare dirt.
  */
 public class Dirt extends Ground {
 
-	Grass grass = new Grass();
 
 	public Dirt() {
 		super('.');
 	}
 
-	public void growGrass(Location location){
-		grass.tick(location);
+	@Override
+	public void tick(Location location)
+	{
+		int chanceTree = 2;
+		int chanceGrass = 10;
+		int counter = 0;
+		double random = Math.random() * 99 + 1;
+		boolean grew = false;
+
+		for (Exit exit : location.getExits())
+		{
+			Location destination = exit.getDestination();
+			if(destination.getGround() instanceof Grass)
+			{
+				counter = counter + 1;
+				if (counter >= 2)
+				{
+					if (random <= chanceGrass)
+					{
+						Ground grass = new Grass();
+						location.setGround(grass);
+						grew = true;
+					}
+				}
+
+			}
+			else if(destination.getGround() instanceof Tree)
+			{
+				if (random<=chanceTree)
+				{
+					Ground grass = new Grass();
+					location.setGround(grass);
+					grew = true;
+				}
+			}
+		}
 	}
 }
