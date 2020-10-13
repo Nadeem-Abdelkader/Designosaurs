@@ -5,23 +5,19 @@ import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.Location;
 
-public class PickFruit extends Action
-{
+public class PickFruit extends Action {
     protected Location location;
 
-    public PickFruit(Location location)
-    {
+    public PickFruit(Location location) {
         this.location = location;
     }
 
     @Override
-    public String execute(Actor actor, GameMap map)
-    {
+    public String execute(Actor actor, GameMap map) {
         int failProbability = 60;
         double random = Math.random() * 100;
 
-        if(random >= failProbability)
-        {
+        if (random >= failProbability) {
             Fruit fruit = new Fruit();
             actor.addItemToInventory(fruit);
             return "success";

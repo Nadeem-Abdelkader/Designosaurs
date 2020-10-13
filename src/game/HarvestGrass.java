@@ -5,19 +5,16 @@ import edu.monash.fit2099.engine.Actor;
 import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.Location;
 
-public class HarvestGrass extends Action
-{
+public class HarvestGrass extends Action {
 
-    private Location location;
+    private final Location location;
 
-    public HarvestGrass(Location location)
-    {
+    public HarvestGrass(Location location) {
         this.location = location;
     }
 
     @Override
-    public String execute(Actor actor, GameMap map)
-    {
+    public String execute(Actor actor, GameMap map) {
         location.setGround(new Dirt());
         actor.addItemToInventory(new Hay());
 
@@ -25,8 +22,7 @@ public class HarvestGrass extends Action
     }
 
     @Override
-    public String menuDescription(Actor actor)
-    {
+    public String menuDescription(Actor actor) {
         return null;
     }
 }
