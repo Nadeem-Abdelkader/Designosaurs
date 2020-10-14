@@ -19,6 +19,7 @@ public class FollowBehaviour implements Behaviour {
         this.target = subject;
     }
 
+
     @Override
     public Action getAction(Actor actor, GameMap map) {
         if (!map.contains(target) || !map.contains(actor))
@@ -26,8 +27,8 @@ public class FollowBehaviour implements Behaviour {
 
         Location here = map.locationOf(actor);
         Location there = map.locationOf(target);
-
         int currentDistance = distance(here, there);
+
         for (Exit exit : here.getExits()) {
             Location destination = exit.getDestination();
             if (destination.canActorEnter(actor)) {

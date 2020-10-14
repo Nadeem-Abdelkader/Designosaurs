@@ -13,7 +13,7 @@ import edu.monash.fit2099.engine.Menu;
 public class Player extends Actor {
 
     private final Menu menu = new Menu();
-
+    private int ecoPoints=0;
     /**
      * Constructor.
      *
@@ -29,6 +29,7 @@ public class Player extends Actor {
     public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
         if (map.locationOf(this).getGround() instanceof Grass) {
             actions.add(new HarvestGrass(map.locationOf(this)));
+            ecoPoints+=1;
         }
         if (map.locationOf(this).getGround() instanceof Tree) {
             actions.add(new PickFruit(map.locationOf(this)));
