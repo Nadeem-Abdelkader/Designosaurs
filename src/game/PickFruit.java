@@ -29,6 +29,4 @@ public class PickFruit extends Action {
     public String menuDescription(Actor actor) {
         return actor + " pick fruit from tree";
     }
-
-
 }
