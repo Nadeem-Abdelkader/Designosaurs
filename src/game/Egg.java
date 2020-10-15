@@ -13,7 +13,7 @@ public class Egg extends Item {
     public void tick(Location location) {
         hatchTimer -= 1;
         if (hatchTimer == 0) {
-            Stegosaur newSte = new Stegosaur("baby stega");
+            Stegosaur newSte = new Stegosaur("baby stega",false);
             location.addActor(newSte);
             location.removeItem(this);
         }
