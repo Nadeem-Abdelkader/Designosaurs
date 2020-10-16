@@ -8,10 +8,6 @@ public class VendingMachine extends Ground {
         super('V');
     }
 
-    @Override
-    public boolean canActorEnter(Actor actor) {
-        return false;
-    }
 
 //    TODO: not done yet
 }
