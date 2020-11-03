@@ -2,7 +2,7 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
-public class Allosaur extends Dino {
+public class Allosaur extends Dinosaur {
     /**
      * Constructor.
      *

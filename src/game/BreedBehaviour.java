@@ -10,9 +10,9 @@ import java.util.List;
 
 public class BreedBehaviour implements Behaviour {
 
-    private final Dino mate;
+    private final Dinosaur mate;
 
-    public BreedBehaviour(Dino dino) {
+    public BreedBehaviour(Dinosaur dino) {
         this.mate = dino;
     }
 

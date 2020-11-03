@@ -3,12 +3,10 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
-import java.util.ArrayList;
-
 /**
  * A herbivorous dinosaur.
  */
-public class Stegosaur extends Dino {
+public class Stegosaur extends Dinosaur {
     // Will need to change this to a collection if Stegosaur gets additional Behaviours.
     /**
      * Constructor.
