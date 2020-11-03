@@ -1,0 +1,8 @@
+To implement thirst and water in the system new behaviours for seeking and drinking water should be added, so a SeekWaterBehaviour and a DrinkWaterBehaviour class was created.
+
+The SeekWaterBehaviour class:
+    1 - Implements the Behaviour class
+
+The DrinkWaterBehaviour class:
+    1 - Implements the Behaviour class
+    

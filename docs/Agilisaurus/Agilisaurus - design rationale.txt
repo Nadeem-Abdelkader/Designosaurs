@@ -1,0 +1,3 @@
+For Agilisaurus to be added into the game, a new dedicated class will be added into the game where it will interface the
+classes similar to Stegosaur where it has the same behaviour such as eat, breed, wander and follow, however there will
+be extra behaviour such as SeekCorpseBehaviour where an Agilisaurus will search for corpses to eat. Agilisaurus class extends the Dinosaur class.

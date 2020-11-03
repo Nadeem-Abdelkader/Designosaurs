@@ -4,7 +4,7 @@ import edu.monash.fit2099.engine.*;
 
 import java.util.ArrayList;
 
-public abstract class Dino extends Actor {
+public abstract class Dinosaur extends Actor {
     //    TODO: not tested
     private final ArrayList<Behaviour> behaviour = new ArrayList<>();
     private final String gender;
@@ -18,7 +18,7 @@ public abstract class Dino extends Actor {
      * @param displayChar the character that will represent the Actor in the display
      * @param hitPoints   the Actor's starting hit points
      */
-    public Dino(String name, char displayChar, int hitPoints, boolean isAdult) {
+    public Dinosaur(String name, char displayChar, int hitPoints, boolean isAdult) {
         super(name, displayChar, hitPoints);
         if (Math.random() < 0.5)
             this.gender = "Male";
