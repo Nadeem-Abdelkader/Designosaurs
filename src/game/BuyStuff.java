@@ -5,13 +5,13 @@ import edu.monash.fit2099.engine.*;
 import java.util.Arrays;
 
 public class BuyStuff extends Action {
-    private final Capabilities capabilities = new Capabilities();
     protected Location location;
     protected Item itemToBuy;
 
     public BuyStuff(Location location) {
         this.location = location;
         for (ListOfItems items : ListOfItems.values()) {
+            Capabilities capabilities = new Capabilities();
             capabilities.addCapability(items);
         }
     }

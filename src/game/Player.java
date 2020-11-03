@@ -40,6 +40,9 @@ public class Player extends Actor {
         if (map.locationOf(this).getGround() instanceof VendingMachine){
             actions.add(new BuyStuff(map.locationOf(this)));
         }
+        if (map.locationOf(this).getActor() instanceof Stegosaur){
+            actions.add(new FeedAction(map.locationOf(this)));
+        }
         // Handle multi-turn Actions
         if (lastAction.getNextAction() != null)
             return lastAction.getNextAction();
