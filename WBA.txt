@@ -1,15 +1,24 @@
+Assignment 1 and 2:
 Grass - Nadeem Abdelkader
 Hungry dinosaurs - Nadeem Abdelkader
 Breeding - Charles Tan Wei Wen
 Eco points and purchasing - Charles Tan Wei Wen
 Allosaurs - Charles Tan Wei Wen
 
-The responsibility of each feature includes:
-    1 - Producing class diagram
-    2 - Producing interaction diagram
-    3 - Producing design rationale
+Assignment 3:
+Thirst and water - Nadeem Abdelkader
+Agilisaurus - Nadeem Abdelkader
+Archaeopteryx - Charles Tan Wei Wen
+Second map - Charles Tan Wei Wen
+A more sophisticated game driver - skip for now due to lack of time
 
-Each member is resposnible for some features. However, we discuss all the features with eachother.
+The responsibility of each feature includes:
+    1 - Producing class diagram (Assignment 1 and 3)
+    2 - Producing interaction diagram (Assignment 1)
+    3 - Producing design rationale (Assignment 1 and 3)
+    4 - Producing the code (Assignment 2 and 3)
+
+Each member is responsible for some features. However, we discuss all the features with each other.
 
 I accept this WBA, Nadeem Abdelkader
 I accept this WBA, Charles Tan Wei Wen
