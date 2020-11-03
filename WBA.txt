@@ -11,6 +11,7 @@ Agilisaurus - Nadeem Abdelkader
 Archaeopteryx - Charles Tan Wei Wen
 Second map - Charles Tan Wei Wen
 A more sophisticated game driver - skip for now due to lack of time
+Recommendations for extensions to the game engine - skip for now due to lack of time
 
 The responsibility of each feature includes:
     1 - Producing class diagram (Assignment 1 and 3)
