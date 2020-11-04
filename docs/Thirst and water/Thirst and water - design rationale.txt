@@ -5,4 +5,9 @@ The SeekWaterBehaviour class:
 
 The DrinkWaterBehaviour class:
     1 - Implements the Behaviour class
-    
+
+To implement a system that will allow Dinosaurs to drink, a Water class was created.
+
+The Water class:
+    1 - Extends the Ground class
+    2 - Has a dependency relationship with the Application class (Application creates a Water instance)
