@@ -8,8 +8,8 @@ public class Allosaur extends Dinosaur {
      *
      * @param name the name of the Actor
      */
-    public Allosaur(String name) {
-        super(name, 'A', 100, true);
+    public Allosaur(String name, boolean isAdult) {
+        super(name, 'A', 100, isAdult);
     }
 
     @Override
@@ -24,5 +24,14 @@ public class Allosaur extends Dinosaur {
         } else {
             return new IntrinsicWeapon(0, "bites but misses");
         }
+    }
+
+    @Override
+    public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
+        if(map.locationOf(this).getItems() instanceof DeadStegasour){
+            this.addFoodLevel(50);
+            map.locationOf(this).removeItem(map.locationOf(this).getItems().get(0));
+        }
+        return super.playTurn(actions, lastAction, map, display);
     }
 }

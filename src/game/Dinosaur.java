@@ -10,6 +10,7 @@ public abstract class Dinosaur extends Actor {
     private final String gender;
     private int foodLevel;
     private int knockdownCountdown;
+    private final int maxFoodLevel=100;
 
     /**
      * Constructor.
@@ -75,6 +76,7 @@ public abstract class Dinosaur extends Actor {
     }
     public void addFoodLevel(int add){
         foodLevel+=add;
+        foodLevel=Math.min(maxFoodLevel,foodLevel);
     }
 
 //    public void breed() {

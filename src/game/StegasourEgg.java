@@ -2,10 +2,10 @@ package game;
 
 import edu.monash.fit2099.engine.*;
 
-public class Egg extends Item {
-    int hatchTimer = 20;
+public class StegasourEgg extends Item {
+    private int hatchTimer = 20;
 
-    public Egg() {
+    public StegasourEgg() {
         super("Egg", 'E', true);
     }
 

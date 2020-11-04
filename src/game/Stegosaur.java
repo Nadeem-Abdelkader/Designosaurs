@@ -15,7 +15,7 @@ public class Stegosaur extends Dinosaur {
      * @param name the name of this Stegosaur
      */
     public Stegosaur(String name,boolean isAdult) {
-        super(name, 'S', 100,true);
+        super(name, 'S', 100,isAdult);
     }
 
     @Override
@@ -23,4 +23,14 @@ public class Stegosaur extends Dinosaur {
 //        TODO: breed using breed behavoir class
         return null;
     }
+
+    @Override
+    public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
+        if(!this.isConscious() && this.hitPoints<=0){
+            map.locationOf(this).addItem(new DeadStegasour());
+            map.removeActor(this);
+        }
+        return super.playTurn(actions, lastAction, map, display);
+    }
+
 }

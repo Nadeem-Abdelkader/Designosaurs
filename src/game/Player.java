@@ -14,6 +14,12 @@ public class Player extends Actor {
 
     private final Menu menu = new Menu();
     private int ecoPoints=0;
+    public void addEcoPoints(int points){
+        ecoPoints+=points;
+    }
+    private int getEcoPoints(){
+        return ecoPoints;
+    }
     /**
      * Constructor.
      *
@@ -41,7 +47,7 @@ public class Player extends Actor {
             actions.add(new BuyStuff(map.locationOf(this)));
         }
         if (map.locationOf(this).getActor() instanceof Stegosaur){
-            actions.add(new FeedAction(map.locationOf(this)));
+            actions.add(new FeedAction(map.locationOf(this),this));
         }
         // Handle multi-turn Actions
         if (lastAction.getNextAction() != null)

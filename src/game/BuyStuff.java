@@ -17,15 +17,21 @@ public class BuyStuff extends Action {
     }
 
     @Override
-    public String execute(Actor actor,GameMap map) {
-        actor.addItemToInventory(itemToBuy);
-        return "SUCCess";
+    public String execute(Actor actor, GameMap map) {
+        actor.addItemToInventory(new Hay());
+        actor.addItemToInventory(new Fruit());
+        actor.addItemToInventory(new VegetarianMeal());
+        actor.addItemToInventory(new CarnivoreMeal());
+        actor.addItemToInventory(new StegasourEgg());
+        actor.addItemToInventory(new AllosourEgg());
+        actor.addItemToInventory(new LaserGun());
+        return "Failed";
     }
 
 
     @Override
     public String menuDescription(Actor actor) {
-        return actor + " buys " + Arrays.toString(ListOfItems.values());
+        return actor + " buys stuff from vending machine" ;
 //        TODO: cant make it iterate like directions
     }
 }
