@@ -19,7 +19,7 @@ public class Application {
 
         FancyGroundFactory groundFactory =
                 new FancyGroundFactory(new Dirt(), new Wall(), new Floor(),
-                        new Tree(), new VendingMachine());
+                        new Tree(), new VendingMachine() , new Water());
 
         List<String> map = Arrays.asList(
                 "................................................................................",
