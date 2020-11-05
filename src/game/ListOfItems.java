@@ -6,5 +6,7 @@ package game;
  * @author Charles Tan Wei Wen
  */
 public enum ListOfItems {
-    Hay, Fruit, VegetarianMeal, CarnivoreMeal, StegasourEgg, AllosourEgg, LaserGun
+    Hay, Fruit, VegetarianMeal, CarnivoreMeal,
+    StegasourEgg, AllosourEgg, LaserGun,
+    ArchaeopteryxEgg
 }
