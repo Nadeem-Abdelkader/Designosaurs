@@ -63,6 +63,10 @@ public class BuyAction extends Action {
                 player.addItemToInventory(new LaserGun());
                 return "Player bought Laser gun";
             }
+            case "ArchaeopteryxEgg"-> {
+                player.addItemToInventory(new ArchaeopteryxEgg());
+                return "Player bought Archaeopteryx Egg";
+            }
         }
         return "Player didnt buy anything";
     }
