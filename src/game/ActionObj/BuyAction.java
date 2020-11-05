@@ -36,39 +36,37 @@ public class BuyAction extends Action {
      */
     @Override
     public String execute(Actor actor, GameMap map) {
-        switch (item) {
-            case "Hay" -> {
-                player.addItemToInventory(new Hay());
-                return "Player bought Hay";
-            }
-            case "Fruit" -> {
-                player.addItemToInventory(new Fruit());
-                return "Player bought fruit";
-            }
-            case "VegetarianMeal" -> {
-                player.addItemToInventory(new VegetarianMeal());
-                return "Player bought Vegetarian meal";
-            }
-            case "CarnivoreMeal" -> {
-                player.addItemToInventory(new CarnivoreMeal());
-                return "Player bought Carnivore meal";
-            }
-            case "StegasourEgg" -> {
-                player.addItemToInventory(new StegasourEgg());
-                return "Player bought Stegasour egg";
-            }
-            case "AllosourEgg" -> {
-                player.addItemToInventory(new AllosourEgg());
-                return "Player bought Allosaur egg";
-            }
-            case "LaserGun" -> {
-                player.addItemToInventory(new LaserGun());
-                return "Player bought Laser gun";
-            }
-            case "ArchaeopteryxEgg"-> {
-                player.addItemToInventory(new ArchaeopteryxEgg());
-                return "Player bought Archaeopteryx Egg";
-            }
+        if (item.equals("Hay")){
+            player.addItemToInventory(new Hay());
+            return "Player bought Hay";
+        }
+        else if (item.equals("Fruit")){
+            player.addItemToInventory(new Fruit());
+            return "Player bought fruit";
+        }
+        else if (item.equals("VegetarianMeal")){
+            player.addItemToInventory(new VegetarianMeal());
+            return "Player bought Vegetarian meal";
+        }
+        else if (item.equals("CarnivoreMeal")){
+            player.addItemToInventory(new CarnivoreMeal());
+            return "Player bought Carnivore meal";
+        }
+        else if (item.equals("StegasourEgg")){
+            player.addItemToInventory(new StegasourEgg());
+            return "Player bought Stegasour egg";
+        }
+        else if (item.equals("AllosourEgg")){
+            player.addItemToInventory(new AllosourEgg());
+            return "Player bought Allosaur egg";
+        }
+        else if (item.equals("LaserGun")){
+            player.addItemToInventory(new LaserGun());
+            return "Player bought Laser gun";
+        }
+        else if (item.equals("ArchaeopteryxEgg")){
+            player.addItemToInventory(new ArchaeopteryxEgg());
+            return "Player bought Archaeopteryx Egg";
         }
         return "Player didnt buy anything";
     }
