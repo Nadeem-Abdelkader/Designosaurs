@@ -1,21 +1,32 @@
 package game;
 
-import edu.monash.fit2099.engine.Action;
-import edu.monash.fit2099.engine.Actor;
-import edu.monash.fit2099.engine.GameMap;
 import edu.monash.fit2099.engine.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * class for breeding between dinosaurs
+ *
+ * @author Charles Tan Wei Wen
+ */
 public class BreedBehaviour implements Behaviour {
-
+    /**
+     * constructor for dinosaur, determine which two dinosaurs to mate with
+     */
     private final Dinosaur mate;
 
     public BreedBehaviour(Dinosaur dino) {
         this.mate = dino;
     }
 
+    /**
+     * determines
+     *
+     * @param actor the Actor acting
+     * @param map   the GameMap containing the Actor
+     * @return a behaviour or action? not implemented yet
+     */
     @Override
     public Action getAction(Actor actor, GameMap map) {
         if (!map.contains(mate) || !map.contains(actor))

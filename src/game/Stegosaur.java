@@ -4,7 +4,9 @@ package game;
 import edu.monash.fit2099.engine.*;
 
 /**
- * A herbivorous dinosaur.
+ * Class of a herbivorous dinosaur.
+ *
+ * @author Charles Tan Wei Wen
  */
 public class Stegosaur extends Dinosaur {
     // Will need to change this to a collection if Stegosaur gets additional Behaviours.
@@ -24,6 +26,17 @@ public class Stegosaur extends Dinosaur {
         return null;
     }
 
+    /**
+     * Stegasour will have a foodlevel where it decrements by 1 every turn, sends out an alert
+     * when foodlevel drops below 20, and sent into an unconscious state when it drops to 0,
+     * if stegasour has no health, it dies and becomes a dead stegasour where allosaur can eat it
+     *
+     * @param actions    collection of possible Actions for this Actor
+     * @param lastAction The Action this Actor took last turn. Can do interesting things in conjunction with Action.getNextAction()
+     * @param map        the map containing the Actor
+     * @param display    the I/O object to which messages may be written
+     * @return the Action to be performed
+     */
     @Override
     public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
         if(!this.isConscious() && this.hitPoints<=0){
@@ -32,5 +45,4 @@ public class Stegosaur extends Dinosaur {
         }
         return super.playTurn(actions, lastAction, map, display);
     }
-
 }

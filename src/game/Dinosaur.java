@@ -4,8 +4,14 @@ import edu.monash.fit2099.engine.*;
 
 import java.util.ArrayList;
 
+/**
+ * An abstract class for creating dinosaurs
+ * initializes useful variables such as foodlevel, gender, behaviour for every type dinosaurs to use
+ *
+ * @author Charles Tan Wei Wen
+ */
 public abstract class Dinosaur extends Actor {
-    //    TODO: not tested
+
     private final ArrayList<Behaviour> behaviour = new ArrayList<>();
     private final String gender;
     private int foodLevel;
@@ -13,7 +19,8 @@ public abstract class Dinosaur extends Actor {
     private final int maxFoodLevel=100;
 
     /**
-     * Constructor.
+     * Constructor for dinosaurs, creates a dinosaur with a random gender(50% male or female)
+     * initializes staring foodlevel as 50
      *
      * @param displayChar the character that will represent the Actor in the display
      * @param hitPoints   the Actor's starting hit points
@@ -45,12 +52,16 @@ public abstract class Dinosaur extends Actor {
     }
 
     /**
-     * Figure out what to do next.
-     * <p>
-     * FIXME: Stegosaur wanders around at random, or if no suitable MoveActions are available, it
-     * just stands there.  That's boring.
+     * Actions of what the dinosaur will do for next turn
+     * foodlevel will be decremented and a warning will be printed out when it reaches
+     * 20 or below, at 0 foodlevel, the dinosaur will become unconscious in 20 turns if no food is eaten/fed
      *
-     * @see edu.monash.fit2099.engine.Actor#playTurn(Actions, Action, GameMap, Display)
+     * @param actions    collection of possible Actions for this Actor
+     * @param lastAction The Action this Actor took last turn. Can do interesting things in conjunction with Action.getNextAction()
+     * @param map        the map containing the Actor
+     * @param display    the I/O object to which messages may be written
+     *
+     * @return the action the player will take based on the condition of the dinosaur
      */
     public Action playTurn(Actions actions, Action lastAction, GameMap map, Display display) {
         if (foodLevel > 20)
@@ -74,6 +85,13 @@ public abstract class Dinosaur extends Actor {
         }
         return new DoNothingAction();
     }
+
+    /**
+     * simple function to add foodlevel to a dinosaur
+     * caps at 100 if any more food is given
+     *
+     * @param add the amount of foodlevel to be added
+     */
     public void addFoodLevel(int add){
         foodLevel+=add;
         foodLevel=Math.min(maxFoodLevel,foodLevel);
