@@ -11,6 +11,7 @@ public class Allosaur extends Dinosaur {
      * Constructor.
      *
      * @param name the name of the Actor
+     * @param isAdult boolean to check whether allosaur is baby or adult
      */
     public Allosaur(String name, boolean isAdult) {
         super(name, 'A', 100, isAdult);

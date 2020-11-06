@@ -25,9 +25,10 @@ public abstract class Dinosaur extends Actor {
     /**
      * Constructor for dinosaurs, creates a dinosaur with a random gender(50% male or female)
      * initializes staring foodlevel as 50
-     *
-     * @param displayChar the character that will represent the Actor in the display
-     * @param hitPoints   the Actor's starting hit points
+     * @param name name of dinosaur
+     * @param displayChar display character to represent the dinosaur in map
+     * @param hitPoints initial hitpoints of dinosaur
+     * @param isAdult boolean of checking whether dinosaur is a baby or adult
      */
     public Dinosaur(String name, char displayChar, int hitPoints, boolean isAdult) {
         super(name, displayChar, hitPoints);

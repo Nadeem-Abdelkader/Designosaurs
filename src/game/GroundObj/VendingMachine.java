@@ -15,7 +15,5 @@ public class VendingMachine extends Ground {
         super('V');
     }
 
-
-//    TODO: not done yet
 }
 

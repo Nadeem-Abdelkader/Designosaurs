@@ -17,6 +17,7 @@ public class Stegosaur extends Dinosaur {
      * All Stegosaurs are represented by a 'S' and have 100 hit points.
      *
      * @param name the name of this Stegosaur
+     * @param isAdult boolean to check whether stegasaur is baby or adult
      */
     public Stegosaur(String name,boolean isAdult) {
         super(name, 'S', 100,isAdult);

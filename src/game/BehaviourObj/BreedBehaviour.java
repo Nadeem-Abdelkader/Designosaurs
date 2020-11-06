@@ -36,9 +36,9 @@ public class BreedBehaviour implements Behaviour {
         Location mate2 = map.locationOf(mate);
         int distanceDiff = distance(mate1, mate2);
 
-        List<Exit> exits=new ArrayList<Exit>(map.locationOf(actor).getExits());
-        for (Exit e:exits){
-            if(distanceDiff==1){
+        List<Exit> exits = new ArrayList<Exit>(map.locationOf(actor).getExits());
+        for (Exit e : exits) {
+            if (distanceDiff == 1) {
 //                TODO: if dist=1 timer=10 and each turn-1
             }
         }
